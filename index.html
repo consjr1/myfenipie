@@ -22,7 +22,7 @@
 
         /* Header Section */
         .header {
-            background: url("IMG-20241221-WA0004.jpg") no-repeat center center/cover;
+            background-image: url("IMG-20241221-WA0004.jpg"); no-repeat center center/cover;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -45,13 +45,11 @@
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
-
-
-         /* About Section */
+        /* About Section */
         .about {
             padding: 4rem 2rem;
             text-align: center;
@@ -120,7 +118,8 @@
         .gallery img:hover {
             transform: scale(1.05);
         }
-        /* Love Notes Section */
+
+        /* Interactive Love Notes */
         .love-notes {
             padding: 4rem 2rem;
             background: #f5e6e8;
@@ -141,24 +140,37 @@
 
         .note {
             background: #fff;
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #ff4081;
-            text-transform: uppercase;
-            border: 2px solid #ff4081;
+            transition: transform 0.3s ease;
         }
 
         .note:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 0px 20px rgba(255, 0, 76, 0.8);
+            transform: translateY(-10px);
         }
 
-        /* Popup Styles */
+        .note p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            background: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+
+           /* Popup Styles */
         .popup {
             display: none;
             position: fixed;
@@ -217,7 +229,6 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 999;
         }
-
     </style>
 </head>
 <body>
@@ -229,8 +240,8 @@
         </div>
     </div>
 
-
-<div class="about">
+    <!-- About Section -->
+    <div class="about">
         <h2>My Dearest Afeni,</h2>
         <p>
         I want you to know that I've been so happy to have you as a part of my life. You mean the world to me. 
@@ -260,8 +271,7 @@
         </div>
     </div>
 
-    
-    <!-- Love Notes Section -->
+    <!-- Interactive Love Notes -->
     <div class="love-notes">
         <h2>However, I still have a very important question...</h2>
         <div class="note-container">
@@ -279,11 +289,6 @@
         <button class="yes-red" onclick="closePopup()">Yes (but in red)</button>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Copyright 2025. Made by Afeni's Boyfriend. <br> If yo man cya do this, get a new man. </p>
-    </footer>
-
     <script>
         function openPopup() {
             document.getElementById("popup").style.display = "block";
@@ -294,6 +299,9 @@
             document.getElementById("popup").style.display = "none";
             document.getElementById("popup-bg").style.display = "none";
         }
-    </script>
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2025. Made by Afeni's Boyfriend. <br> If yo man cya do this, get a new man. </p>
+    </footer>
 </body>
 </html>
