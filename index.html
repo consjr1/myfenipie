@@ -387,9 +387,17 @@
             heartContainer.appendChild(heart);
         }
     }
-        
+          function openPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("popup-bg").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("popup-bg").style.display = "none";
+        }
   function showYayMessage(color) {
-      function closePopup() 
+        function closePopup() 
         let yayContainer = document.getElementById("yayContainer");
         yayContainer.style.display = "flex";
         yayContainer.style.background = color === 'red' ? '#ff4d4d' : '#ff99cc';
@@ -402,15 +410,6 @@
         }, 3000);
     }
         
-        function openPopup() {
-            document.getElementById("popup").style.display = "block";
-            document.getElementById("popup-bg").style.display = "block";
-        }
-
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-            document.getElementById("popup-bg").style.display = "none";
-        }
     </script>
     <!-- Footer -->
     <footer>
